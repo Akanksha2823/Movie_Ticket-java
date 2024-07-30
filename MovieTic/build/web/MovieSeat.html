@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="MovieBE" method="post">
+        <label for="Movies">Movie:</label>
+        <select id="Movies" name="Movi" required>
+            <option value="None">Select Movie:</option>
+            <option value="Leo">Leo</option>
+            <option value="12th FAIL">12th FAIL</option>
+            <option value="The Vacant House">The Vacant House</option>
+            <option value="Sapta Sagardaache Ello">Sapta Sagardaache Ello</option>
+            <option value="Jawan">Jawan</option>
+            <option value="Tiger 3">Tiger 3</option>
+            <option value="Jigar Thanda">Jigar Thanda</option>
+            <option value="Mangalavaram">Mangalavaram</option>
+             <option value="Tagaru Palya">Tagaru Palya </option>
+            
+           
+        </select>
+     
+  
+        <br>
+        <label for="seatCount">Number of Seats:</label>
+        <select id="seatCount" name="Count"  required>
+            <option value="0"  >0</option>
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" >9</option>
+            <option value="10" >10</option>
+           
+        </select>
+       
+        <label for="price">price:</label>
+        <input  type="tel" id="sums" name="tp" value="0" >
+        <br>
+        <button onclick="add()"> Total Ticket Price</button>
+       <script type="text/javascript">
+           
+            function add(){
+            var num1 = Number(document.getElementById("seatCount").value);
+            var num2 = Number("200");
+            var sum1 = num1 * num2 ;
+            document.getElementById("sums").value= String(sum1);
+            }
+           
+            
+        </script>
+       
+        <br>
+        <br>
+         <select id="locatio" name="locate" required>
+            <option value="lulu mall">lulu mall</option>
+            <option value="orion mall">orion mall</option>
+            <option value="elements mall">elements mall</option>
+            <option value="lido mall">lido mall</option>
+             <option value="Tulsi theater">Tulsi theater</option>
+              <option value="1MG mall">1MG mall</option>
+               <option value="Forum mall">Forum mall</option>
+            
+           
+        </select>
+
+        <label for="date" >Select Date:</label>
+        <input type="date"   id="date" name="Dates" required>
+        <br><br>
+        <br>
+
+        <label for="time">Select Time:</label>
+        <select id="time" name="Times" required>
+            <option value="09:00:00">09:00:00</option>
+            <option value="12:30:00">12:30:00</option>
+            <option value="15:45:00">15:45:00</option>
+            
+        </select>
+<!--        <script type="text/javascript">
+            window.onload=function(){document.getElementById("")
+                        .addEventListener(click,()=>{
+                            const invoice=this.document.getElementById("invoice");
+                    console.log(invoice);
+                    console.log(window);
+                    html2pdf().from(window).save();
+                        })}
+                                </script>-->
+
+        <button type="submit">Book Now</button>
+    </form>
+</body>
+</html>

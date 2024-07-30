@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        welcome
+    </title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .background-image{
+    
+        background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/images/movie.jpg);
+        background-size: cover;
+        width:100%;
+        height:100vh;
+        margin-top: 0;
+    }
+    .content{
+        width:100%;
+        position:absolute ;
+        top:35%;
+        transform: translateY(-50);
+        text-align: center;
+        color: white;
+        font-size:larger;
+        margin-top: 0px;
+    }
+    button{
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid rgb(244, 229, 230);
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+    }
+    span{
+        background:rgb(236, 222, 223);
+        height: 100%;
+        width:100%;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    button:hover span{
+        width:100%;
+    }
+    button:hover{
+        border:none;
+    }
+</style>
+<body>
+    <div class="background-image"></div>
+    <div class="content">
+        <h1>BOOK THE TICKETS!!</h1>
+        <div>
+        <button type="button" onclick="location.href='Home.html'"><span></span>USER </button>
+        <button type="button" onclick="location.href='Adminhome.html'"><span></span> ADMIN</button>
+    </div>
+</div>
+        
+
+          
+</body>

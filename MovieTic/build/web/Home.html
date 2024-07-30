@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Ticket Booking </title>
+        <link rel="stylesheet" href="project.css">
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+    <body>
+        <header>
+            <a href="#home" class="logo">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAepJREFUSEvN1surTmEUBvDfEcllgEwduQ1chsqEzMwPIRIlA4V/wa2MjETMTBxyz38gYWQmMVDEVBmJAaL1tfbpbfe12/uzne9bk/fZ715rPe+z3uuUMdnUmHhNFPFarOu5Eh/xqcxZKl6AOzjYM2mV7haO4U90lMSHcfs/kVZpZ/CkTnwWF9LjOG4m/pwjjc9FuIeV+I1D+JJ+57G7wM8KEU8Tn8PFOnF0RnDVfwMn8/sUrieOqbib+DH2JY618Q5Lcj634Vv+G5Q3hQ04ylJHR5BX/cvxBpHwBzYXC+QR9qbvATxIfBpXE8dAY8BhnYgjYCeeZ/AL7Eq8Cu8R7VdsyjZ+h3/EhYV/xHUmjuA2JQ/FoTysXvKo1Pe2pS4XxjJsz8BI8CpxpSi2YdhL/Eq8FasTv8WWtsRF7l5h7JrGxdUrW5FssojLfdyk+Ap+4gwWdyxNlHlwSJX7uC1xFbwGl3CklqdpLP9U6rngZIgT6lpxXM4bcUW0J8/xFQ3MvSoOnh2IuY92XhRvwGXEddfGhirusrjiAojr7QQWtmHs4+R6jY1Y2oGwch2quHwIjJCzVcjQh0B5wbfKMoLTfjysHyBxy9wvXhQj5G0MmcXRYY+9Kmo9pntm/YB4u83ZRD3oexY7PN3YFP8FAu1uH3oIQSoAAAAASUVORK5CYII="/>  MovieTicket
+            </a>
+
+            <ul class="navbar">
+
+
+                <nav>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()" ></i>
+
+                        <ul><br><br>
+                            <li><a href="">Account</a></li><br><br><br>
+                            <li><a href="Loginp.html">Book Tickets</a></li><br><br><br>
+                            <li><a href="">Booked Tickets</a></li><br><br><br>
+                            <li><a href="">Cancel Tickets</a></li><br><br><br>
+                            <li><a href="Mainpage.html">Sign Out</a></li><br><br><br>
+                        </ul>
+                    </div>
+                    <i class="fa fa-bars" onclick="showMenu()" ></i>
+                </nav>
+                
+
+                <script>
+                    var navLinks = document.getElementById("navLinks");
+
+                    function showMenu() {
+                        navLinks.style.left = "0";
+                    }
+                    function hideMenu() {
+                        navLinks.style.left = "-250px";
+                    }
+
+                </script>
+                </a>
+                <li><a href="#" class="home-active"><u>Home</u></a></li>
+                <li><a href="Home.html">Movies</a></li>
+                <li><a href="comingsoon.html">ComingSoon</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAmBJREFUSEvl1kuoT1EUx/HPzTMDAxPvRyKPRBkYYCCFhIm8SiGv0E1JRCZGDJBHEeUdKTJgIEwYUSYoyqtIXokUyvvR0v7r+Lv/c87913UH1ux01l7fvdbe67d2g1ayhlbiKgtuj1EYiG54jge4hs/1bL4I3BdbMRUdmwB8wBmswZPmbCAPvALbEdkW2Scsw+Eix8r/WuDIcnVy+oq9uIS7eIj+GIzxWIo2yXcDNpWBNwVejj1pcZzjFNzLCTYc59Az+czGySJ4NXgIbqJdym4sXhUFQS9cQW+8xyA8y1tXDb6AiemmxuJHJaAVlxG4zq9OOYr5ZcFd8Do578CqZkArricwB28R8b7VipHNeAZOJcfRuFoHeGbmfHNjZMErsTPBOuNdHeB+6dbH0gU4Uibj9ZlWaJtXppwNdcDH9H8ttpQBRz/uS47d8aKOjHvgaVo3K3N0f4XKlnoCLiaPyThfB3gazqZ1w3C7TMad8CZJ5H4sqQN8DHPxI2l7zQFS3cenMR3fMTSJSFl+9PGN5HwAi8v2cfiFBkd5YhKFXI7ByxLkPkm5QjZDC2J8RvVqWlNavQhR6rDHmIQ7OTFGJq3umnx2o7Fos7Wm02asS4tjOsXQuJyZTiGncRTjUkmr48TmDzY344p/TKldiJ4usi/pQRDqV7FceNELJM58G6K9QhyqLbT4EDam/l2IuFiF8CJwJUBA4801IL25Ymrdx62MUlV8q+HxHZv7w8qCi0pd/T9gcUEjfrTmPBzPOrUUOBhZeNzyuO2/rSXBAQn1i56OgfFPSl14NC2dcc0N/H/gn1afbR89JErzAAAAAElFTkSuQmCC" height="25"/>
+
+                </form>
+            </ul>
+
+        </header>
+        <div class="sign">
+
+            <button> <a href="signup.html">SignUp</a></button>
+        </div>
+
+        <section class="slider_container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/images/leo.jpeg" alt="leopic"><br><b>LEO</b><br><br>Leo is a 2023 Indian Tamil-language action thriller film directed by Lokesh Kanagaraj and produced by Seven Screen Studio. The film stars Vijay in the title role, alongside Sanjay Dutt, Arjun, Trisha, Gautham Vasudev Menon, Mysskin, Madonna Sebastian, George Maryan, Mansoor Ali Khan, Priya Anand and Mathew Thomas.<br><br>*2h 44m.Action, Thriller.UA.19 Oct,2023<br><br><br><button> <a href="Loginp.html">BookNow</a></button></div>
+                    <div class="swiper-slide"><img src="images/images/thevacant.jpeg" alt="thevacantmovie"><br><b>The Vacant House</b><br><br>Manav, a lonely frustrated young man in search of a companion, attempts to end his life when all of a sudden, the vacant house in his neighbourhood gets new occupants.<br><br>*2h 44m.Action, Thriller.UA.12 May,2023<br><br><br><button> <a href="Loginp.html">BookNow</a></button></div>
+                    <div class="swiper-slide"><img src="images/images/12fail.jpeg" alt="12fail movie"><br><b>12<sup>th</sup>Fail</b><br><br>IPS officer Manoj Kumar Sharma fearlessly embraces the idea of restarting his academic journey and reclaiming his destiny at a place where millions of students attempt the world's toughest competitive exam: UPSC.<br><br>*2h 54m.Drama.UA.28 Feb,2023<br><br><br><button> <a href="Loginp.html">BookNow</a></button></div>
+                    <div class="swiper-slide"><img src="images/images/sapta.jpeg" alt="sapta"><br><b>Saptha Sagar Daache Ello</b><br><br>Manu and Priya's ardent love story unfolds, delving into the depths of their emotions. Manu goes to great lengths to fulfill his promise and their love faces a profound transformation when destiny triggers an unexpected turn.<br><br>*2h 30m.Drama, Romantic.UA.30 Jan,2023<br><br><br><button> <a href="Loginp.html">BookNow</a></button></div>
+                    <div class="swiper-slide"><img src="images/images/jawan.jpeg" alt="jawan movie"><br><b>JAWAN</b><br><br>A man is driven by a personal vendetta to rectify the wrongs in society, while keeping a promise made years ago. He comes up against a monstrous outlaw with no fear, who has caused extreme suffering to many.<br><br>*2h 38m.Action, Thriller.UA.28 sep,2023<br><br><br><button> <a href="Loginp.html">BookNow</a></button></div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+        </section>
+
+
+        <!-- script code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+             var swiper = new Swiper(".mySwiper", {
+
+                 speed: 1000,
+                 autoplay: {
+                     delay: 2000,
+                 },
+                 pagination: {
+                     el: ".swiper-pagination",
+                     type: "fraction",
+                 },
+                 navigation: {
+                     nextEl: ".swiper-button-next",
+                     prevEl: ".swiper-button-prev",
+                 },
+             });
+        </script>
+
+        <!-- card creation -->
+        <div class="card_creation">
+            <div class="card">
+                <img src="images/images/Tiger3.jpeg" alt="tigermoviepicture">
+                <div class="card-content">
+                    <h3>Tiger 3</h3>
+                    <p>Tiger 3 is a 2023 Indian Hindi-language action thriller film directed by Maneesh Sharma and produced by Aditya Chopra under Yash Raj Films. The film stars Salman Khan, Katrina Kaif and Emraan Hashmi. It is a sequel to Tiger Zinda Hai and is the fifth installment in the YRF Spy Universe.</p>
+                    <br><button> <a href="Loginp.html">BookNow</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/images/jigal.jpeg" alt="jigal movie">
+                <div class="card-content">
+                    <h3>Jigar Thanda</h3>
+                    <p>The film was officially announced in August 2022. Principal photography began that December and wrapped in July 2023. The film has music composed by Santhosh Narayanan, cinematography handled by Tirru and editing by Shafique Mohamed Ali..</p>
+                    <br><br><button> <a href="Loginp.html">BookNow</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/images/mangal.jpeg" alt="mangal movie">
+                <div class="card-content">
+                    <h3>Mangalavaram</h3>
+                    <p>Ajay Bhupathi's "Mangalavaram" stirred anticipation with its intriguing title, sparking intense discussions among viewers eager to unravel its plot. The heightened curiosity was further fueled by the inclusion of the captivating and alluring Payal Rajput, adding an extra layer of intrigue to the film.</p>
+                    <br><button> <a href="Loginp.html">BookNow</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/images/tagurupalya.jpeg" alt="tagurumovie">
+                <div class="card-content">
+                    <h3>Tagaru Palya</h3>
+                    <p>Villagers cook food on the temple premises and serve it to the devotees, reveling in the essence of rural life.</p>
+                    <br><br><br><br><br><br><br><button> <a href="Loginp.html">BookNow</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="card_creation">
+            <div class="card">
+                <img src="images/images/sapthasagara.jpeg" alt="sapthasagara movie">
+                <div class="card-content">
+                    <h3>Saptha Sagar Daache Ello</h3>
+                    <p>Manu and Priya's ardent love story unfolds, delving into the depths of their emotions. Manu goes to great lengths to fulfill his promise and their love faces a profound transformation when destiny triggers an unexpected turn.</p>
+                    <br><button> <a href="Loginp.html">BookNow</a></button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/images/jawancard.jpeg" alt="jawan movie card">
+                <div class="card-content">
+                    <h3>Jawan</h3>
+                    <p>A man is driven by a personal vendetta to rectify the wrongs in society, while keeping a promise made years ago. He comes up against a monstrous outlaw with no fear, who has caused extreme suffering to many.</p>
+                    <br><br><br><button> <a href="Loginp.html">BookNow</a></button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <hr>
+
+    </body>
+</html>

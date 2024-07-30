@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        body{
+        margin:0;
+        padding:0;
+        font-family:montserrat;
+        background: linear-gradient(120deg,#666666,#a6a6a6);
+        height:100vh;
+        overflow:hidden;
+        text-align:center;
+    }
+    .center{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:400px;
+        background:white;
+        border-radius: 10px;
+    }
+    </style>
+    
+    <body>
+        <div><h1> Admin Login</h1></div>
+        <hr>
+        <div class="login">
+        <form method="post"action="LoginVerficationBE">
+            <div>Enter the E-Mail ID:<input type="email" name="email"> </div> <br><br>
+            <div>Enter the Password <input type="password" name="pwd"> <br><br>
+                <input type="submit" value="Login">
+            </div>
+                </form>
+                </body>
+                </html>
